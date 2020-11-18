@@ -1,0 +1,50 @@
+<head> 
+    <title> Message Board</title>
+    <style> 
+    body {
+        background: green;
+    }
+    h1 {
+        font-size: 300%;
+    }
+    ul {
+        font-size: 200%;
+    }
+    li {
+        margin-bottom: 2%;
+        border: 1px solid;
+        margin-right: 1%;
+        background-color: aqua;
+    }
+    .footer {
+        text-align: right;
+        font-style: italic;
+    }
+    .author {
+        font-size: 100%;
+        font-style: italic;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    p {
+        margin: 1%;
+    }
+    .title {
+        text-align: center;
+    }
+    </style>
+</head>
+<body> 
+    <h1> Message board homepage</h1>
+    <ul>
+        {% for post in object_list %}
+            <li> 
+                <p class="title"> {{ post.title }}</p>
+                <p>{{ post.text }}</p> 
+                <p class="author" >{{ post.author }}</p>
+                 
+            </li> 
+        {% endfor %}
+    </ul>
+    <hr>
+    <p class="footer"> Created by my hands)</p>
+</body>
